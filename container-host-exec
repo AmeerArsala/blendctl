@@ -155,5 +155,5 @@ fi
 
 host-spawn "${host_command}" "$@ && pwd > $cachedirfile"
 
-# Exit here, we don't continue execution
 exit $?
+# Exit here, we don't continue execution
