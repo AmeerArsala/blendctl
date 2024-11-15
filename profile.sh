@@ -16,3 +16,9 @@ hostexec() {
   builtin cd -- "$(cat "$container_host_exec_cache_dir_file")" || exit
   rm -f "$container_host_exec_cache_dir_file"
 }
+
+# Ideally, this function should not be shipped in an actual version
+hostexec_raw() {
+  # TODO: remove the `./` from `./container-host-exec-raw`. It's only temporary for development
+  ./container-host-exec-raw "$@"
+}
